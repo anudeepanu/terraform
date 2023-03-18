@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
     bucket = "endhuku"
-    key = "vpc2"
+    key = "keypair"
     access_key = "accesskey"
-    secret_key = "secretkey"
+    secret_key = "secret-key"
     region = "us-west-2"
   }
 }

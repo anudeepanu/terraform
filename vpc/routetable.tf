@@ -35,6 +35,6 @@ resource "aws_default_route_table" "test" {
 resource "aws_route_table_association" "test2" {
   #vpc_id         = aws_vpc.test.id
   route_table_id = aws_default_route_table.test.id
-  subnet_id      = aws_subnet.private.id
+  subnet_id      = aws_subnet.pvt.id
 
 }
