@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo apt update -y
+sudo apt install zip -y
+sudo apt install apache2 -y
+systemctl status apache2
+wget https://www.free-css.com/assets/files/free-css-templates/download/page284/rhino.zip
+unzip rhino.zip
+cd rhino-html/
+sudo cp -r * /var/www/html/
+
+
