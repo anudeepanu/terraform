@@ -1,6 +1,7 @@
 locals{
     env = "pro"
 }
+#these local block may be in any  of the one file in the directory.
 resource "aws_vpc" "test" {
   cidr_block       = "20.0.0.0/16"
   instance_tenancy = "default"
@@ -28,4 +29,18 @@ resource "aws_subnet" "pvt" {
   tags = {
     Name = "${local.env}-pvt"
   }
+}
+#you can get all outputs present in attribute section Attribute Reference
+
+output "arn"{
+ value =  aws_vpc.test.arn
+}
+
+output"sg"{
+  value = aws_vpc.test.default_security_group_id
+}
+
+output "id"{
+  sensitive = "true"
+  value = aws_vpc.test.id
 }
