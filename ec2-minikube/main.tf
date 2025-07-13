@@ -41,7 +41,7 @@ resource "aws_instance" "minikube" {
 
 resource "aws_key_pair" "mykey" {
   key_name   = "my-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyCYYB5k90OVzwAw3E3G7iEqBK9yK41LWmjrKYMX/illbnJdiVtUMtCJkwepXn7VlQeUYaLAlHKx8wf4GummcEbjnzpN6+RrT/yKGT7AD"
+  public_key = ""
 }
 
 resource "aws_security_group" "all_open" {
